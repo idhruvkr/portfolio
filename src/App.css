@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: lightblue;
+}
+
+.main-container {
+    display: flex;
+    height: 25rem;
+}
+
+.main-container .text-cent {
+    margin-left: 45%;
+    margin-bottom: 16px;
+}
+
+.image img {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+}
+
+.img-container img {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+}
