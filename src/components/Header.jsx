@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
+
 const Header = () => {
 
     const [brandName, setBrandName] = useState('Dhruv Kumar');
@@ -6,27 +8,27 @@ const Header = () => {
         {
             id: 1,
             title: 'Home',
-            route: '/home'
+            route: '/portfolio/home'
         },
         {
             id: 2,
             title: 'About',
-            route: '/about'
+            route: '/portfolio/about'
         },
         {
             id: 3,
             title: 'Skills',
-            route: '/skills'
+            route: '/portfolio/skills'
         },
         {
             id: 4,
-            title: 'Portfolio',
-            route: '/portfolio'
+            title: 'Services',
+            route: '/portfolio/services'
         },
         {
             id: 5,
             title: 'Contact',
-            route: '/contact'
+            route: '/portfolio/contact'
         },
     ]);
 
@@ -44,14 +46,17 @@ const Header = () => {
                 <div className="space-x-6">
                     {
                         menuLinks.map((tab) => (
-                            <a key={tab.id} href={tab.route}>{tab.title}</a>
+                            <Link key={tab.id} to={tab.route}>{tab.title}</Link>
                         ))
                     }
                 </div>
                 <div>
-                    <a href={action.route} className="px-3 py-2 bg-yellow-500 rounded-full shadow-lg">
+                    {/* <a href={action.route} className="px-3 py-2 bg-yellow-500 rounded-full shadow-lg">
                         {action.title}
-                    </a>
+                    </a> */}
+                    {/* <Link to={action.route} className="px-3 py-2 bg-yellow-500 rounded-full shadow-lg">
+                        {action.title}
+                    </Link> */}
                 </div>
             </div>
         </>
