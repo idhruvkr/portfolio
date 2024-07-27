@@ -50,14 +50,14 @@ const Header = () => {
                         ))
                     }
                 </div>
-                <div>
+                {/* <div> */}
                     {/* <a href={action.route} className="px-3 py-2 bg-yellow-500 rounded-full shadow-lg">
                         {action.title}
                     </a> */}
                     {/* <Link to={action.route} className="px-3 py-2 bg-yellow-500 rounded-full shadow-lg">
                         {action.title}
                     </Link> */}
-                </div>
+                {/* </div> */}
             </div>
         </>
     );

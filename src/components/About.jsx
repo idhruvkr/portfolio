@@ -23,7 +23,7 @@ const About = () => {
 
     return (
         <>
-            <div className="relative bg-gray-100 py-12 px-6 md:px-12">
+            <div className="relative bg-gray-100 py-6 px-6 md:px-12">
                 <h1 className="text-center mb-10 text-4xl font-bold text-gray-800 underline">
                     About Me
                 </h1>
