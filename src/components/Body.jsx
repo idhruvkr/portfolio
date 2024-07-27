@@ -96,7 +96,7 @@ const Body = () => {
                         </a>
                     </div>
                 </div>
-                <div className="image w-full md:w-1/3 flex justify-center ml-5 md:mt-0">
+                <div className="image w-full md:w-1/3 flex justify-center ml-5">
                     <img className='image1 rounded-full shadow-lg w-48 md:w-64' src={userImage} alt="img" />
                 </div>
             </div>
@@ -116,7 +116,7 @@ const Body = () => {
                             <p>{details.desc1}</p>
                             <p>{details.desc2}</p>
                             <p>{details.desc3}</p>
-                            <p>{details.desc4}</p>
+                            {/* <p>{details.desc4}</p> */}
                             <button className="bg-orange-500 px-2 py-2 rounded-full">
                                 <Link key="/portfolio/about" to="/portfolio/about">Read More...</Link>
                             </button>

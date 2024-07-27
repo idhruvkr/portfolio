@@ -120,6 +120,10 @@
     .main-content.shifted {
         padding-top: calc(64px + 16px + 100px); /* Header + padding + menu height */
     }
+
+    .main-container {
+        height: 104vh;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
