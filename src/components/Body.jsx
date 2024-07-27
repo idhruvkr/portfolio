@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 
 import banner from '../assets/user_pic.jpeg';
 import bannerImgBackground from '../assets/banner.jpeg';
-import userImage from "../assets/user.png";
+import userImage from "../assets/myprofilepicture.jpg";
+import backgroundImage from "../assets/laptop_bg.jpeg";
 
 const Body = () => {
     const [details, setDetails] = useState({
-        image: userImage,
+        image: banner,
         title: "Java Web Developer",
         // desc1:
         //     `Developed and maintained high-quality, efficient code for web applications using languages 
@@ -70,7 +71,7 @@ const Body = () => {
         <>
             {/* Home Section */}
             <div style={{
-                backgroundImage: `url(${bannerImgBackground})`,
+                backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
             }}
                 className="main-container text-white flex flex-col md:flex-row items-center py-10 px-5 md:px-20">
@@ -95,8 +96,8 @@ const Body = () => {
                         </a>
                     </div>
                 </div>
-                <div className="image w-full md:w-1/3 flex justify-center mt-5 md:mt-0">
-                    <img className='rounded-full shadow-lg w-48 md:w-64' src={banner} alt="img" />
+                <div className="image w-full md:w-1/3 flex justify-center ml-5 md:mt-0">
+                    <img className='image1 rounded-full shadow-lg w-48 md:w-64' src={userImage} alt="img" />
                 </div>
             </div>
 
@@ -223,9 +224,9 @@ const Body = () => {
                             and visually appealing interfaces that enhance user experience and engagement.
                             Additionally, I have experience in backend development, working with REST APIs and schedulers to ensure seamless integration and efficient data processing.
                         </p>
-                        <a className="text-lg px-6 py-3 bg-blue-600 text-white rounded-full transition-transform transform hover:scale-105 hover:bg-blue-700">
-                            <Link key="/portfolio/about" to="/portfolio/contact">Contact Me</Link>
-                        </a>
+                        <button className="text-lg px-4 py-2 bg-blue-600 text-white rounded-full transition-transform transform hover:scale-105 hover:bg-blue-700">
+                            <Link key="/portfolio/contact" to="/portfolio/contact">Contact Me</Link>
+                        </button>
                     </div>
                     <div className="w-full flex justify-center mt-8 md:mt-0">
                         <div className="flex flex-wrap justify-center text-center space-x-2">

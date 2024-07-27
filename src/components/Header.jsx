@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-
     const [brandName, setBrandName] = useState('Dhruv Kumar');
     const [menuLinks, setMenuLinks] = useState([
         {
@@ -32,32 +31,43 @@ const Header = () => {
         },
     ]);
 
-    const [action, setAction] = useState({
-        title: 'Hire Me',
-        route: 'hireme'
-    });
+    // const [action, setAction] = useState({
+    //     title: 'Hire Me',
+    //     route: 'hireme'
+    // });
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <>
-            <div className="h-16 border main items-center bg-blue-200">
-                <div className="text-2xl font-bold">
+            <div className="header-container">
+                <div className="brand">
                     <h1>{brandName}</h1>
                 </div>
-                <div className="space-x-6">
+                <button className="menu-icon" onClick={toggleMenu}>
+                    {/* Menu Icon */}
+                    <span className="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+                    <span className="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+                    <span className="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+                <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
                     {
                         menuLinks.map((tab) => (
-                            <Link key={tab.id} to={tab.route}>{tab.title}</Link>
+                            <Link key={tab.id} to={tab.route} onClick={() => setIsMenuOpen(false)}>
+                                {tab.title}
+                            </Link>
                         ))
                     }
-                </div>
-                {/* <div> */}
-                    {/* <a href={action.route} className="px-3 py-2 bg-yellow-500 rounded-full shadow-lg">
+                </nav>
+                {/* <div className="action">
+                    <Link to={action.route} className="hire-me-button">
                         {action.title}
-                    </a> */}
-                    {/* <Link to={action.route} className="px-3 py-2 bg-yellow-500 rounded-full shadow-lg">
-                        {action.title}
-                    </Link> */}
-                {/* </div> */}
+                    </Link>
+                </div> */}
             </div>
         </>
     );

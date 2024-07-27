@@ -1,19 +1,8 @@
-.main {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 16px;
-    background-color: lightblue;
-}
-
 .main-container {
     display: flex;
     height: 25rem;
 }
 
-.main-container .text-cent {
-    margin-left: 45%;
-    margin-bottom: 16px;
-}
 
 .image img {
     width: 340px;
@@ -25,4 +14,146 @@
     width: 340px;
     height: 340px;
     border-radius: 50%;
+}
+
+/* Base styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 64px;
+    background-color: #bfdbfe; /* Tailwind's blue-200 */
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    z-index: 10; /* Ensure header is on top of other content */
+}
+
+.brand h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #555; /* Slightly darker shade */
+}
+
+.action .hire-me-button {
+    padding: 8px 16px;
+    background-color: #fbbf24; /* Tailwind's yellow-500 */
+    color: #fff;
+    border-radius: 9999px; /* Full rounded */
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.action .hire-me-button:hover {
+    background-color: #f59e0b; /* Slightly darker yellow */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background-color: #bfdbfe;
+        display: none; /* Hidden by default */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 8px 16px;
+        gap: 0.5rem;
+        z-index: 9; /* Ensure menu is below header */
+    }
+
+    .menu.open {
+        display: flex;
+        /* position: relative; */
+        height: auto;
+    }
+
+    .action {
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .action .hire-me-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust main content to shift below the header */
+    .main-content {
+        padding-top: calc(64px + 16px); /* Header height + padding */
+        transition: padding-top 0.3s ease;
+    }
+
+    .main-content.shifted {
+        padding-top: calc(64px + 16px + 100px); /* Header + padding + menu height */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-container {
+        padding: 0 24px;
+    }
+
+    .brand h1 {
+        font-size: 1.75rem;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+
+    .action .hire-me-button {
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header-container {
+        padding: 0 32px;
+    }
+
+    .brand h1 {
+        font-size: 2rem;
+    }
+
+    .menu a {
+        font-size: 1.125rem;
+    }
+
+    .action .hire-me-button {
+        padding: 12px 24px;
+    }
 }
