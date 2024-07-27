@@ -224,7 +224,7 @@ const Body = () => {
                             Additionally, I have experience in backend development, working with REST APIs and schedulers to ensure seamless integration and efficient data processing.
                         </p>
                         <a className="text-lg px-6 py-3 bg-blue-600 text-white rounded-full transition-transform transform hover:scale-105 hover:bg-blue-700">
-                            <Link key="/portfolio/about" to="/portfolio/contact">Check</Link>Contact Me
+                            <Link key="/portfolio/about" to="/portfolio/contact">Contact Me</Link>
                         </a>
                     </div>
                     <div className="w-full flex justify-center mt-8 md:mt-0">
