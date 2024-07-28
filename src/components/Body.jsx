@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
-import banner from '../assets/user_pic.jpeg';
+import banner from '../assets/mypic.png';
 import bannerImgBackground from '../assets/banner.jpeg';
-import userImage from "../assets/myprofilepicture.jpg";
+import userImage from "../assets/myprofilepicture.png";
 import backgroundImage from "../assets/laptop_bg.jpeg";
 
 const Body = () => {

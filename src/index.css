@@ -8,5 +8,8 @@
 
 .image1:hover {
     box-shadow: 2px 2px 20px yellow;
-    /* filter: drop-shadow(2px 2px 20px yellow); */
+}
+
+.img-container img {
+    filter: drop-shadow(4px 4px 20px rgb(208, 138, 7));
 }
