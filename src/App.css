@@ -16,6 +16,12 @@
     border-radius: 50%;
 }
 
+.img-container1 img {
+    width: 340px;
+    height: 340px;
+    border-radius: 25%;
+}
+
 /* Base styles */
 .header-container {
     display: flex;

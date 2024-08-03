@@ -10,6 +10,6 @@
     box-shadow: 2px 2px 20px yellow;
 }
 
-.img-container img {
+.img-container1 img {
     filter: drop-shadow(4px 4px 20px rgb(208, 138, 7));
 }

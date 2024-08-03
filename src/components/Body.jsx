@@ -107,7 +107,7 @@ const Body = () => {
                     About Me
                 </h1>
                 <div className="flex flex-col md:flex-row items-center">
-                    <div className="img-container w-full md:w-2/5 flex justify-center mb-5 md:mb-0">
+                    <div className="img-container1 w-full md:w-2/5 flex justify-center mb-5 md:mb-0">
                         <img className="w-48 md:w-64" src={details.image} alt="img" />
                     </div>
                     <div className="w-full md:w-3/5 flex justify-center rounded-lg p-6 shadow-xl transition-transform transform hover:scale-105">
